@@ -6,6 +6,8 @@ dotenv.config();
 var checkUserAuth = async (req,res,next) =>{
     let token;
     const {authorization}=req.headers;
+    console.log(authorization);
+    console.log(req.body);
     if(authorization && authorization.startsWith('Bearer')){
         try{
             token=authorization.split(' ')[1];
